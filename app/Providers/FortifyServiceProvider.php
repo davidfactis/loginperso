@@ -49,7 +49,9 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::loginView(function () {
-            return view('login.auth');
+            return view('login.auth',[
+                'authTarget' => 'login'
+            ]);
         });
 
         Fortify::authenticateUsing(function (Request $request) {
@@ -66,7 +68,9 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::registerView(function () {
-            return view('login.auth');
+            return view('login.auth',[
+                'authTarget' => 'register'
+            ]);
         });
 
     }
