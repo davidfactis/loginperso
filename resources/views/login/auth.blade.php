@@ -9,6 +9,7 @@
     <title>Login</title>
 </head>
 <body>
+    <div id="authTarget" style="display: none" data-target="{{ $authTarget }}"></div>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form method="POST" action="{{ route('register') }}">
